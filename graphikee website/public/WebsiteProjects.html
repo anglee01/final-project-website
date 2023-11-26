@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graphikee - Building Digital Product</title>
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="/images/hero-banner.png" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/sidebar.css" />
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script defer src="js/sidebar.js"></script>
+</head>
+
+<body id="top">
+
+  <header class="header" data-header>
+    <div class="container">
+      <a href="#" class="logo">graphikee</a>
+
+      <nav class="navbar" data-navbar>
+        <div class="wrapper">
+          <a href="#" class="logo">graphikee</a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="index.html#home" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="index.html#service" class="navbar-link" data-nav-link>Services</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="index.html#feature" class="navbar-link" data-nav-link>Features</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="index.html#project" class="navbar-link" data-nav-link>Portfolio</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <button class="btn btn-primary has-before has-after" data-open-quotation-sidebar>Let’s Talk 👋</button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+    </div>
+  </header>
+
+  <aside class="sidebar" data-quotation-sidebar>
+    <header class="sidebar__header">
+      <button class="sidebar__close-btn" data-close-quotation-sidebar-btn>
+        <i class="fa-solid fa-xmark fa-2x"></i>
+      </button>
+    </header>
+    <main class="sidebar__main">
+      <h2 class="sidebar-title">Get a quote</h2>
+      <form class="quotation-form" data-quotation-form>
+        <div class="input-group">
+          <label for="fullName" class="input-label">Full Name</label>
+          <input type="text" name="fullName" id="fullName" class="input-element" />
+        </div>
+        <div class="input-group">
+          <label for="companyName" class="input-label">Company Name</label>
+          <input type="text" name="companyName" id="companyName" class="input-element" />
+        </div>
+        <div class="input-group">
+          <label for="contactNumber" class="input-label">Contact Number <small>(Preferably Whatstappp)</small></label>
+          <input type="tel" name="contactNumber" id="contactNumber" class="input-element" />
+        </div>
+        <div class="input-group">
+          <label for="service-selected">Select a service</label>
+          <select name="service-selected" id="service-selected" class="select-element">
+            <option value="web-and-mobile-development" class="option-element">Web & Mobile Development</option>
+            <option value="user-research-and-ui-designing" class="option-element">User Research and UI Designing</option>
+            <option value="digital-marketing-and-solution" class="option-element">Digital Marketing and Solution</option>
+            <option value="ecommerce-store-development" class="option-element">E-commerce Store Development</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="description" class="input-label">Describe your project</label>
+          <textarea name="description" id="description" rows="5" class="textarea-element"></textarea>
+        </div>
+
+        <button type="submit" class="quotation-form__submit-btn">Submit</button>
+      </form>
+    </main>
+  </aside>
+  
+    <main>
+      <article>
+    
+        <!-- 
+          - #Heading
+        -->
+  
+        <section class="section project" id="project" aria-label="project">
+          <div class="container">
+
+            <h2 class="h2 section-title text-center" style="margin-top: 30px;"><span class="has-before">WebFolio</span>
+            </h2>
+  
+            <ul class="filter-list">
+  
+              <li>
+                <button class="filter-btn" data-filter-btn>"Transforming visions into captivating digital experiences – we craft websites that combine stunning design with seamless functionality, elevating your online presence to new heights."</button>
+              </li>
+  
+            </ul>
+  
+            <ul class="grid-flow">
+  
+              <li class="grid-web">
+                <div class="project-card">
+                    <a href="https://eveandgarden.com/" target="_blank">
+                    <img src="./images/website/eveandgarden-showcase.jpg" width="835" height="429" loading="lazy" alt="Book art design"
+                      class="img-cover">
+                    </a>
+                  </figure>
+                </div>
+              </li>
+  
+              <li class="grid-web">
+                <div class="project-card">
+                    <a href="https://rehmanenterprises.net/" target="_blank">
+                    <img src="./images/website/Rehman-showcase.jpg" width="416" height="429" loading="lazy" alt="Graphic Design"
+                      class="img-cover">
+                    </a>
+                  </figure>  
+                </div>
+              </li>
+
+              <li class="grid-web">
+                <div class="project-card">
+                    <a href="https://curencare.pk/" target="_blank">
+                    <img src="./images/website/curenacare-showcase.jpg" width="416" height="429" loading="lazy" alt="Graphic Design"
+                      class="img-cover">
+                    </a>
+                  </figure>  
+                </div>
+              </li>
+  
+            </ul>
+            
+  
+          </div>
+        </section>
+
+        <!-- Testimonials -->
+
+        <section class="section2 project" id="project" aria-label="project">
+            <div class="container">
+  
+              <h2 class="h2 section-title text-center"><span class="has-before">Testimonials</span>
+              </h2>
+    
+              <ul class="box">
+                <li>
+                  <button class="filter-btn" data-filter-btn>"Exceptional web development! My real estate listings shine, attracting more buyers than ever. Professional and user-friendly design."
+                    <span class="title">- Rehman Enterprises</span>
+                </button>
+                </li>
+                <li style="margin-top: 10px;">
+                  <button class="filter-btn" data-filter-btn>"Flawless e-commerce website for my hair care store. Beautiful design, boosted online sales. Impressed clients all around."
+                    <span class="title">- Eve and Garden</span>
+                </button>
+                </li>
+              </ul>
+    
+            </div>
+          </section>
+  
+        <section class="section newsletter has-bg-image" aria-label="newsletter"
+          style="background-image: url('./images/newsletter-bg.jpg')">
+          <div class="container">
+  
+            <figure class="newsletter-banner">
+              <img src="./images/newsletter-banner.png" width="355" height="356" loading="lazy"
+                alt="newsletter banner" class="w-100">
+            </figure>
+  
+            <div class="newsletter-content">
+  
+              <p class="section-subtitle has-before">Get every update</p>
+  
+              <h2 class="h2 section-title">Subscribe newslater get latest updates and deals</h2>
+  
+              <form action="" class="newsletter-form">
+                <input type="email" name="email_address" placeholder="Enter your mail" required class="email-field">
+  
+                <button type="submit" class="btn btn-secondary has-before has-after">
+                  <span class="span">Subscribe</span>
+  
+                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                </button>
+              </form>
+  
+            </div>
+  
+          </div>
+        </section>
+
+
+  
+      </article>
+    </main>
+  
+  
+  
+  
+  
+    <!-- 
+      - #FOOTER
+    -->
+  
+    <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top section">
+
+        <div class="footer-brand">
+
+          <p class="footer-list-title">About graphikee.tech</p>
+
+          <p class="footer-text">
+            A new way to make the payments easy, reliable and 100% secure. claritatem itamconse quat. Exerci tationulla
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-skype"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Usefull Links</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Contact us</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">How it Works</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Create</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Explore</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Terms & Services</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Community</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Help Center</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Partners</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Suggestions</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Blog</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Newsletters</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Instagram post</p>
+          </li>
+
+          <li>
+            <ul class="insta-post">
+
+              <li>
+                <div class="insta-card">
+
+                  <figure class="post-banner">
+                    <img src="./images/insta-post-1.jpg" width="77" height="63" loading="lazy"
+                      alt="instagram post" class="img-cover">
+                  </figure>
+
+                  <a href="#" class="card-content">
+                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="insta-card">
+
+                  <figure class="post-banner">
+                    <img src="./images/insta-post-2.jpg" width="77" height="63" loading="lazy"
+                      alt="instagram post" class="img-cover">
+                  </figure>
+
+                  <a href="#" class="card-content">
+                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="insta-card">
+
+                  <figure class="post-banner">
+                    <img src="./images/insta-post-3.jpg" width="77" height="63" loading="lazy"
+                      alt="instagram post" class="img-cover">
+                  </figure>
+
+                  <a href="#" class="card-content">
+                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="insta-card">
+
+                  <figure class="post-banner">
+                    <img src="./images/insta-post-4.jpg" width="77" height="63" loading="lazy"
+                      alt="instagram post" class="img-cover">
+                  </figure>
+
+                  <a href="#" class="card-content">
+                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="insta-card">
+
+                  <figure class="post-banner">
+                    <img src="./images/insta-post-5.jpg" width="77" height="63" loading="lazy"
+                      alt="instagram post" class="img-cover">
+                  </figure>
+
+                  <a href="#" class="card-content">
+                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="insta-card">
+
+                  <figure class="post-banner">
+                    <img src="./images/insta-post-6.jpg" width="77" height="63" loading="lazy"
+                      alt="instagram post" class="img-cover">
+                  </figure>
+
+                  <a href="#" class="card-content">
+                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p class="copyright">
+          All Rights Reserved by graphikee.tech
+        </p>
+
+        <ul class="footer-bottom-list">
+
+          <li>
+            <a href="#" class="footer-bottom-link">Terms and conditions</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-bottom-link">Privacy policy</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+  
+  
+  
+  
+  
+    <!-- 
+      - #BACK TO TOP
+    -->
+  
+    <a href="#top" class="back-top-btn has-after active" aria-label="back to top" data-back-top-btn>
+      <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+    </a>
+  
+  
+  
+  
+  
+    <!-- 
+      - custom js link
+    -->
+    <script src="./js/script.js" defer></script>
+  
+    <!-- 
+      - ionicon link
+    -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+  </body>

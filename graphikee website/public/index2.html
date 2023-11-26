@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphikee - Building Digital Product</title>
+  
+    <!-- 
+      - favicon
+    -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  
+    <!-- 
+      - custom css link
+    -->
+    <link rel="stylesheet" href="style.css">
+  
+    <!-- 
+      - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  
+    <!-- 
+      - preload images
+    -->
+    <link rel="preload" as="image" href="/images/hero-banner.png">
+  
+  </head>
+  <style>
+    #countdown {
+      font-size: 24px;
+      text-align: center;
+      /* margin-top: 50px; */
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .container{
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* height: 1vh; */
+  
+    }
+  
+    .wrapper{
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+    }
+  
+    .count-font{
+      font-size: 15px;
+    }
+  </style>
+  <body>
+
+    <section class="section" id="home" aria-label="hero">
+
+        <div class="logoContainer">
+          <img src="images/logo.png" alt="" class="logo">
+        </div>
+
+        <div class="container">
+
+          <div>
+
+            <h1 class="h1 hero-title">
+              Building Digital <span class="has-before">Product</span>, Brand and Experience
+            </h1>
+
+            <p class="hero-text">
+              We are launching soon 😍
+            </p>
+
+            <div class="wrapper">
+              <a href="#" class="btn btn-primary has-before has-after">
+                <div id="countdown">
+                    <div id="counter" class="counter"></div>
+                </div>
+              </a>
+            </div>
+
+        </div>
+
+      </section>
+      
+      <script>
+      class CountdownTimer {
+        constructor({ selector, targetDate, timeExpiredMessage = 'We are live' }) {
+          this.selector = selector;
+          this.targetDate = targetDate;
+          this.timeExpiredMessage = timeExpiredMessage;
+          this.start();
+        }
+        start() {
+          const interval = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = this.targetDate - now;
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            document.querySelector(this.selector).innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            if (distance < 0) {
+              clearInterval(interval);
+              document.querySelector(this.selector).innerHTML = 'The ';
+            }
+          }, 1000);
+        }
+      }
+
+      new CountdownTimer({
+        selector: '#counter', // id of the element
+        targetDate: new Date('2023-09-1').getTime(), // Aug 25, 2023
+        timeExpiredMessage: 'We are live',
+      });
+    </script>
+  </body>
+</html>
